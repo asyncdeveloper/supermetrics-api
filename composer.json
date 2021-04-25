@@ -1,0 +1,11 @@
+{
+    "name": "supermetrics/api",
+    "description": "Supermetrics Social Network REST API.",
+    "type": "project",
+    "require": {
+        "vlucas/phpdotenv": "^5.3",
+        "pecee/simple-router": "4.3.2.1",
+        "lavary/crunz": "2.3.*",
+        "illuminate/database": "^8.38"
+    }
+}
