@@ -6,7 +6,9 @@
         "vlucas/phpdotenv": "^5.3",
         "pecee/simple-router": "4.3.2.1",
         "lavary/crunz": "2.3.*",
-        "illuminate/database": "^8.38"
+        "illuminate/database": "^8.38",
+        "guzzlehttp/guzzle": "^7.3",
+        "robmorgan/phinx": "^0.12.6"
     },
     "autoload": {
       "psr-4": {
