@@ -3,6 +3,7 @@
 
 namespace App\Core;
 
+use App\Controllers\DataController;
 use App\Handlers\CustomExceptionHandler;
 use Pecee\SimpleRouter\SimpleRouter;
 
@@ -16,6 +17,10 @@ class Router extends SimpleRouter
         SimpleRouter::group(['exceptionHandler' => CustomExceptionHandler::class ], function () {
             SimpleRouter::get('/', function () {
                 return response()->json([ 'message' => 'Welcome to Supermetrics Rest API ' ]);
+            });
+
+            SimpleRouter::group(['prefix' => 'api'], function () {
+                SimpleRouter::get('/stats', [ DataController::class, 'index' ]);
             });
         });
 
