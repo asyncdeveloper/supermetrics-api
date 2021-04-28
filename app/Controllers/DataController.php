@@ -17,7 +17,7 @@ class DataController {
             ->get();
 
         $groupedPosts = $posts->groupBy(function($d) {
-            return Carbon::parse($d->created_time)->format('M Y');
+            return Carbon::parse($d->created_time)->format('F Y');
         });
 
         // a. Average character length of posts per month
