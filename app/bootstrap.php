@@ -8,4 +8,6 @@ require_once INC_ROOT .'/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(INC_ROOT);
 $dotenv->load();
 
+new \App\Core\Database();
+
 new App\Core\Router();
