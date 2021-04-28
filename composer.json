@@ -14,5 +14,11 @@
       "psr-4": {
         "App\\": "app/"
       }
+    },
+    "scripts": {
+      "schedule:run": "crunz schedule:run",
+      "schedule:list": "crunz schedule:list",
+      "db:migrate": "phinx migrate",
+      "db:rollback": "phinx rollback"
     }
 }
