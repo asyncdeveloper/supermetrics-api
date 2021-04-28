@@ -2,6 +2,11 @@
 FROM php:7.4-apache
 
 # Install PHP extensions needed
+RUN apt-get update && apt-get install -y \
+        git \
+        curl \
+    && docker-php-source delete
+
 RUN docker-php-ext-install pdo pdo_mysql
 
 # Enable common Apache modules
