@@ -16,10 +16,10 @@ class Database
         $this->capsule = new Capsule;
 
         $this->capsule->addConnection([
-          'driver'    => 'mysql',
+          'driver'    => $_ENV['DB_CONNECTION'] ?? 'sqlite',
           'host'      => $_ENV['DB_HOST'] ?? '127.0.0.1',
           'port'      => $_ENV['DB_PORT'] ?? '3306',
-          'database'  => $_ENV['DB_NAME'] ?? 'mvc',
+          'database'  => $_ENV['DB_NAME'] ?? 'database.sqlite',
           'username'  => $_ENV['DB_USER'] ?? 'root',
           'password'  => $_ENV['DB_PASSWORD'] ?? '',
           'charset'   => 'utf8',
