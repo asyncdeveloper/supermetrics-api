@@ -23,9 +23,14 @@ Toolkit for database layer
 Handles database migrations
 
 ## Running the Application
+Create an `.env` file using the command.
+
+```console
+$ cp .env.example .env
+```
 
 ### Environment
-Configure environment variables in `.env` for dev environment based on your MYSQL database configuration as it currently uses SQLite
+Configure environment variables in `.env`  based on your MYSQL database configuration as it currently uses SQLite
 
 ```  
 DB_CONNECTION=<YOUR_MYSQL_TYPE>
@@ -73,6 +78,17 @@ $ php -S localhost:8002
 ```
 
 You should be able to visit your app at http://localhost:8002
+
+#Task Scheduler
+View All Scheduled Tasks
+```console
+$ composer schedule:list
+```
+
+Run Scheduled Tasks
+```console
+$ composer schedule:run
+```
 
 # API documentation:
 List of all API endpoints:
